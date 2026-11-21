@@ -1,0 +1,4530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9da2f635cf9dd5e898f651a02a11c6b7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9da2f635cf9dd5e898f651a02a11c6b7" ></div>
+        
+    
+<div style="
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 160px;
+  background: white;
+  border:2px solid grey;
+  z-index:9999;
+  font-size:14px;
+  padding: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+">
+  <b>League Legend</b><br>
+  <i class="fa fa-map-marker" style="color:red"></i>&nbsp;Premier<br>
+  <i class="fa fa-map-marker" style="color:blue"></i>&nbsp;Championship<br>
+  <i class="fa fa-map-marker" style="color:green"></i>&nbsp;League One<br>
+  <i class="fa fa-map-marker" style="color:orange"></i>&nbsp;League Two
+</div>
+</body>
+<script>
+    
+    
+            var map_9da2f635cf9dd5e898f651a02a11c6b7 = L.map(
+                "map_9da2f635cf9dd5e898f651a02a11c6b7",
+                {
+                    center: [52.5, -1.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7.25,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6f2bd2b40d9a57d522ae7b740d35fe6b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6f2bd2b40d9a57d522ae7b740d35fe6b.addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var marker_0e5c73b47a31f1f1bea9ee574b74962d = L.marker(
+                [51.5549, -0.1084],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b4c6feab5f5f5985a6499e53efac54f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_5604864c244ceb50f0750341d1415abb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4e0515c289bb2d816dcf12e5987d6e82 = $(`<div id="html_4e0515c289bb2d816dcf12e5987d6e82" style="width: 100.0%; height: 100.0%;"><b>Arsenal</b><br>Emirates Stadium</div>`)[0];
+                popup_5604864c244ceb50f0750341d1415abb.setContent(html_4e0515c289bb2d816dcf12e5987d6e82);
+            
+        
+
+        marker_0e5c73b47a31f1f1bea9ee574b74962d.bindPopup(popup_5604864c244ceb50f0750341d1415abb)
+        ;
+
+        
+    
+    
+            marker_0e5c73b47a31f1f1bea9ee574b74962d.bindTooltip(
+                `<div>
+                     Arsenal </br> Emirates Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e5c73b47a31f1f1bea9ee574b74962d.setIcon(icon_b4c6feab5f5f5985a6499e53efac54f0);
+            
+    
+            var marker_097f39d140d31efc3b416e59904974ca = L.marker(
+                [52.509, -1.8847],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_3cbc59b6f2cad316ace6b6ffca0751b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_2d1fefec3591e5cfd0ab069b21d4fef0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3b36c28a1eb2011685f143e4e7341102 = $(`<div id="html_3b36c28a1eb2011685f143e4e7341102" style="width: 100.0%; height: 100.0%;"><b>Aston Villa</b><br>Villa Park</div>`)[0];
+                popup_2d1fefec3591e5cfd0ab069b21d4fef0.setContent(html_3b36c28a1eb2011685f143e4e7341102);
+            
+        
+
+        marker_097f39d140d31efc3b416e59904974ca.bindPopup(popup_2d1fefec3591e5cfd0ab069b21d4fef0)
+        ;
+
+        
+    
+    
+            marker_097f39d140d31efc3b416e59904974ca.bindTooltip(
+                `<div>
+                     Aston Villa </br> Villa Park</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_097f39d140d31efc3b416e59904974ca.setIcon(icon_3cbc59b6f2cad316ace6b6ffca0751b9);
+            
+    
+            var marker_ccc3e95f08a877076be7acc4090ea043 = L.marker(
+                [50.7352, -1.8383],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_37fb4c322216d25970a52ae4eb270801 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_10d2e8011038d4db7ca289cf6b3f148e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ea3b03abb698c5af3064cd7d659f4084 = $(`<div id="html_ea3b03abb698c5af3064cd7d659f4084" style="width: 100.0%; height: 100.0%;"><b>Bournemouth</b><br>Vitality Stadium</div>`)[0];
+                popup_10d2e8011038d4db7ca289cf6b3f148e.setContent(html_ea3b03abb698c5af3064cd7d659f4084);
+            
+        
+
+        marker_ccc3e95f08a877076be7acc4090ea043.bindPopup(popup_10d2e8011038d4db7ca289cf6b3f148e)
+        ;
+
+        
+    
+    
+            marker_ccc3e95f08a877076be7acc4090ea043.bindTooltip(
+                `<div>
+                     Bournemouth </br> Vitality Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccc3e95f08a877076be7acc4090ea043.setIcon(icon_37fb4c322216d25970a52ae4eb270801);
+            
+    
+            var marker_43a8f23c6b923cd995ce64b8f4ebe787 = L.marker(
+                [51.4882, -0.2886],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_a97546986f568805075a14d7f289340c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_4acf2c64968be3758428819040c9809d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ccfeed4403dd1cc8c98a7d3b08363e56 = $(`<div id="html_ccfeed4403dd1cc8c98a7d3b08363e56" style="width: 100.0%; height: 100.0%;"><b>Brentford</b><br>Gtech Community Stadium</div>`)[0];
+                popup_4acf2c64968be3758428819040c9809d.setContent(html_ccfeed4403dd1cc8c98a7d3b08363e56);
+            
+        
+
+        marker_43a8f23c6b923cd995ce64b8f4ebe787.bindPopup(popup_4acf2c64968be3758428819040c9809d)
+        ;
+
+        
+    
+    
+            marker_43a8f23c6b923cd995ce64b8f4ebe787.bindTooltip(
+                `<div>
+                     Brentford </br> Gtech Community Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43a8f23c6b923cd995ce64b8f4ebe787.setIcon(icon_a97546986f568805075a14d7f289340c);
+            
+    
+            var marker_d08a0fcf2d236afd3fd2954758447dec = L.marker(
+                [50.8618, -0.0831],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_acc51b10374e92427473c229a772b70a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_1130abbe168f6747d5f9225f374dc4ce = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f43d633a19625445ce1a9e04f2987bd = $(`<div id="html_2f43d633a19625445ce1a9e04f2987bd" style="width: 100.0%; height: 100.0%;"><b>Brighton</b><br>Amex Stadium</div>`)[0];
+                popup_1130abbe168f6747d5f9225f374dc4ce.setContent(html_2f43d633a19625445ce1a9e04f2987bd);
+            
+        
+
+        marker_d08a0fcf2d236afd3fd2954758447dec.bindPopup(popup_1130abbe168f6747d5f9225f374dc4ce)
+        ;
+
+        
+    
+    
+            marker_d08a0fcf2d236afd3fd2954758447dec.bindTooltip(
+                `<div>
+                     Brighton </br> Amex Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d08a0fcf2d236afd3fd2954758447dec.setIcon(icon_acc51b10374e92427473c229a772b70a);
+            
+    
+            var marker_1d9d5659870bbbee52f88c2369c87e5a = L.marker(
+                [53.7461, -0.3678],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_7463e59fb40ed09b4176048da7c9948d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_854302cea9cc040bffeaab4e1909b60c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ae38d4c0df51f94978a34fd314cf5b95 = $(`<div id="html_ae38d4c0df51f94978a34fd314cf5b95" style="width: 100.0%; height: 100.0%;"><b>Hull City</b><br>MKM Stadium</div>`)[0];
+                popup_854302cea9cc040bffeaab4e1909b60c.setContent(html_ae38d4c0df51f94978a34fd314cf5b95);
+            
+        
+
+        marker_1d9d5659870bbbee52f88c2369c87e5a.bindPopup(popup_854302cea9cc040bffeaab4e1909b60c)
+        ;
+
+        
+    
+    
+            marker_1d9d5659870bbbee52f88c2369c87e5a.bindTooltip(
+                `<div>
+                     Hull City </br> MKM Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d9d5659870bbbee52f88c2369c87e5a.setIcon(icon_7463e59fb40ed09b4176048da7c9948d);
+            
+    
+            var marker_ebd8285d96005a8210453fa48407a0ab = L.marker(
+                [51.4816, -0.191],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_454b313fcd4efea83ab7161272d60cfb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_dbfb28140a0371eaab1bde0d2b4daaa5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e51becb3519ca711883fcae0107e4498 = $(`<div id="html_e51becb3519ca711883fcae0107e4498" style="width: 100.0%; height: 100.0%;"><b>Chelsea</b><br>Stamford Bridge</div>`)[0];
+                popup_dbfb28140a0371eaab1bde0d2b4daaa5.setContent(html_e51becb3519ca711883fcae0107e4498);
+            
+        
+
+        marker_ebd8285d96005a8210453fa48407a0ab.bindPopup(popup_dbfb28140a0371eaab1bde0d2b4daaa5)
+        ;
+
+        
+    
+    
+            marker_ebd8285d96005a8210453fa48407a0ab.bindTooltip(
+                `<div>
+                     Chelsea </br> Stamford Bridge</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebd8285d96005a8210453fa48407a0ab.setIcon(icon_454b313fcd4efea83ab7161272d60cfb);
+            
+    
+            var marker_dd3cb8f9c2845df338adbbaddbf21d01 = L.marker(
+                [51.3983, -0.0855],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_881ab27dbfab704b724f7396dc8b32a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_2e8a73f06a3477b53acc6c1759fd93cb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c00959952479857e078e93c016e6f5c3 = $(`<div id="html_c00959952479857e078e93c016e6f5c3" style="width: 100.0%; height: 100.0%;"><b>Crystal Palace</b><br>Selhurst Park</div>`)[0];
+                popup_2e8a73f06a3477b53acc6c1759fd93cb.setContent(html_c00959952479857e078e93c016e6f5c3);
+            
+        
+
+        marker_dd3cb8f9c2845df338adbbaddbf21d01.bindPopup(popup_2e8a73f06a3477b53acc6c1759fd93cb)
+        ;
+
+        
+    
+    
+            marker_dd3cb8f9c2845df338adbbaddbf21d01.bindTooltip(
+                `<div>
+                     Crystal Palace </br> Selhurst Park</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd3cb8f9c2845df338adbbaddbf21d01.setIcon(icon_881ab27dbfab704b724f7396dc8b32a3);
+            
+    
+            var marker_cd949a026a2655e4d7abc845eab67f37 = L.marker(
+                [53.4489, -2.9862],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_c1b35c7d372d2dccdb74a5b2ed113ec3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_501e34a610e7ebf32018c2216a736780 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7bbee8ff1807b71d95202e5e1c0da8a3 = $(`<div id="html_7bbee8ff1807b71d95202e5e1c0da8a3" style="width: 100.0%; height: 100.0%;"><b>Everton</b><br>Hill Dickinson Stadium</div>`)[0];
+                popup_501e34a610e7ebf32018c2216a736780.setContent(html_7bbee8ff1807b71d95202e5e1c0da8a3);
+            
+        
+
+        marker_cd949a026a2655e4d7abc845eab67f37.bindPopup(popup_501e34a610e7ebf32018c2216a736780)
+        ;
+
+        
+    
+    
+            marker_cd949a026a2655e4d7abc845eab67f37.bindTooltip(
+                `<div>
+                     Everton </br> Hill Dickinson Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd949a026a2655e4d7abc845eab67f37.setIcon(icon_c1b35c7d372d2dccdb74a5b2ed113ec3);
+            
+    
+            var marker_b068d94e2c059cad701af8898cf8837b = L.marker(
+                [51.4749, -0.2217],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_73ebdaabd0490ce08c8d5cfab3d565af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_7c0dc784e49d63b01a1b4b4224c5812b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_134348ffac9c9a60bd6da119ba425de5 = $(`<div id="html_134348ffac9c9a60bd6da119ba425de5" style="width: 100.0%; height: 100.0%;"><b>Fulham</b><br>Craven Cottage</div>`)[0];
+                popup_7c0dc784e49d63b01a1b4b4224c5812b.setContent(html_134348ffac9c9a60bd6da119ba425de5);
+            
+        
+
+        marker_b068d94e2c059cad701af8898cf8837b.bindPopup(popup_7c0dc784e49d63b01a1b4b4224c5812b)
+        ;
+
+        
+    
+    
+            marker_b068d94e2c059cad701af8898cf8837b.bindTooltip(
+                `<div>
+                     Fulham </br> Craven Cottage</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b068d94e2c059cad701af8898cf8837b.setIcon(icon_73ebdaabd0490ce08c8d5cfab3d565af);
+            
+    
+            var marker_55cd0d2d5b1acc28adc322e569258c3a = L.marker(
+                [53.7774, -1.5726],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_3accc2a1d9cf0ffea7a4b9b29db4ec6b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_27c668f11a9c8569ca1d1753d67b109d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_96f28e795c5b08fd2f514afc8f819b0a = $(`<div id="html_96f28e795c5b08fd2f514afc8f819b0a" style="width: 100.0%; height: 100.0%;"><b>Leeds United</b><br>Elland Road</div>`)[0];
+                popup_27c668f11a9c8569ca1d1753d67b109d.setContent(html_96f28e795c5b08fd2f514afc8f819b0a);
+            
+        
+
+        marker_55cd0d2d5b1acc28adc322e569258c3a.bindPopup(popup_27c668f11a9c8569ca1d1753d67b109d)
+        ;
+
+        
+    
+    
+            marker_55cd0d2d5b1acc28adc322e569258c3a.bindTooltip(
+                `<div>
+                     Leeds United </br> Elland Road</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55cd0d2d5b1acc28adc322e569258c3a.setIcon(icon_3accc2a1d9cf0ffea7a4b9b29db4ec6b);
+            
+    
+            var marker_e5e535d0d169bdff0dbbf772a2157aa3 = L.marker(
+                [53.4308, -2.9608],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_a143384b6d9b017ecb548eeb840419a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_c4c2f6bb0117ba067e0eb855faf60652 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cb18e89a4207cbd90d7071603300967d = $(`<div id="html_cb18e89a4207cbd90d7071603300967d" style="width: 100.0%; height: 100.0%;"><b>Liverpool</b><br>Anfield</div>`)[0];
+                popup_c4c2f6bb0117ba067e0eb855faf60652.setContent(html_cb18e89a4207cbd90d7071603300967d);
+            
+        
+
+        marker_e5e535d0d169bdff0dbbf772a2157aa3.bindPopup(popup_c4c2f6bb0117ba067e0eb855faf60652)
+        ;
+
+        
+    
+    
+            marker_e5e535d0d169bdff0dbbf772a2157aa3.bindTooltip(
+                `<div>
+                     Liverpool </br> Anfield</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5e535d0d169bdff0dbbf772a2157aa3.setIcon(icon_a143384b6d9b017ecb548eeb840419a6);
+            
+    
+            var marker_15ec28273582b06e18f54988b78031d4 = L.marker(
+                [53.4831, -2.2004],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_737ef4fa41e59b362bb524d2b286da46 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_40e49a5065147eeb76d31da8f6c03d61 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_795249a352d091140a27288118ccbccc = $(`<div id="html_795249a352d091140a27288118ccbccc" style="width: 100.0%; height: 100.0%;"><b>Manchester City</b><br>Etihad Stadium</div>`)[0];
+                popup_40e49a5065147eeb76d31da8f6c03d61.setContent(html_795249a352d091140a27288118ccbccc);
+            
+        
+
+        marker_15ec28273582b06e18f54988b78031d4.bindPopup(popup_40e49a5065147eeb76d31da8f6c03d61)
+        ;
+
+        
+    
+    
+            marker_15ec28273582b06e18f54988b78031d4.bindTooltip(
+                `<div>
+                     Manchester City </br> Etihad Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15ec28273582b06e18f54988b78031d4.setIcon(icon_737ef4fa41e59b362bb524d2b286da46);
+            
+    
+            var marker_82a9c87a0531f797d34a9a2de46cfd44 = L.marker(
+                [53.4631, -2.2913],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_191016a0d0b8bd4253bfc426b382c02f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_c8a7b5d3d7e60b035c667a4902c91120 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3574ae980cfb9ea7328b4cca70e80631 = $(`<div id="html_3574ae980cfb9ea7328b4cca70e80631" style="width: 100.0%; height: 100.0%;"><b>Manchester United</b><br>Old Trafford</div>`)[0];
+                popup_c8a7b5d3d7e60b035c667a4902c91120.setContent(html_3574ae980cfb9ea7328b4cca70e80631);
+            
+        
+
+        marker_82a9c87a0531f797d34a9a2de46cfd44.bindPopup(popup_c8a7b5d3d7e60b035c667a4902c91120)
+        ;
+
+        
+    
+    
+            marker_82a9c87a0531f797d34a9a2de46cfd44.bindTooltip(
+                `<div>
+                     Manchester United </br> Old Trafford</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82a9c87a0531f797d34a9a2de46cfd44.setIcon(icon_191016a0d0b8bd4253bfc426b382c02f);
+            
+    
+            var marker_d4d2b2a11e9d32951dc5ede678c9ef91 = L.marker(
+                [54.9756, -1.6218],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b816c6ffb114bd33dedc52833997ebf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_7a45c1678a5c34b2794ed3d69166d2dc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d082bed4eced078df61eb54839135632 = $(`<div id="html_d082bed4eced078df61eb54839135632" style="width: 100.0%; height: 100.0%;"><b>Newcastle</b><br>St. James' Park</div>`)[0];
+                popup_7a45c1678a5c34b2794ed3d69166d2dc.setContent(html_d082bed4eced078df61eb54839135632);
+            
+        
+
+        marker_d4d2b2a11e9d32951dc5ede678c9ef91.bindPopup(popup_7a45c1678a5c34b2794ed3d69166d2dc)
+        ;
+
+        
+    
+    
+            marker_d4d2b2a11e9d32951dc5ede678c9ef91.bindTooltip(
+                `<div>
+                     Newcastle </br> St. James' Park</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4d2b2a11e9d32951dc5ede678c9ef91.setIcon(icon_b816c6ffb114bd33dedc52833997ebf7);
+            
+    
+            var marker_5c902867e25fd59b2ee980d7161e7a26 = L.marker(
+                [52.94, -1.1326],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_11789108b8039d5b7abeb7302d6f6c71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_6b6476669bfb8ca01ddf43a118bb9733 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dbdd36b6b994c931bac3c254860da1a9 = $(`<div id="html_dbdd36b6b994c931bac3c254860da1a9" style="width: 100.0%; height: 100.0%;"><b>Nottingham Forest</b><br>City Ground</div>`)[0];
+                popup_6b6476669bfb8ca01ddf43a118bb9733.setContent(html_dbdd36b6b994c931bac3c254860da1a9);
+            
+        
+
+        marker_5c902867e25fd59b2ee980d7161e7a26.bindPopup(popup_6b6476669bfb8ca01ddf43a118bb9733)
+        ;
+
+        
+    
+    
+            marker_5c902867e25fd59b2ee980d7161e7a26.bindTooltip(
+                `<div>
+                     Nottingham Forest </br> City Ground</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c902867e25fd59b2ee980d7161e7a26.setIcon(icon_11789108b8039d5b7abeb7302d6f6c71);
+            
+    
+            var marker_11acf155256d0c2fb917860a2c170cb7 = L.marker(
+                [54.9146, -1.3883],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_1475130f02a2b60b3b3759287bc4ee1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_414e1f4b3704946bf587d8c4b675ca6b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_24cce1e4245dcd84915d936b962c9751 = $(`<div id="html_24cce1e4245dcd84915d936b962c9751" style="width: 100.0%; height: 100.0%;"><b>Sunderland</b><br>Stadium of Light</div>`)[0];
+                popup_414e1f4b3704946bf587d8c4b675ca6b.setContent(html_24cce1e4245dcd84915d936b962c9751);
+            
+        
+
+        marker_11acf155256d0c2fb917860a2c170cb7.bindPopup(popup_414e1f4b3704946bf587d8c4b675ca6b)
+        ;
+
+        
+    
+    
+            marker_11acf155256d0c2fb917860a2c170cb7.bindTooltip(
+                `<div>
+                     Sunderland </br> Stadium of Light</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_11acf155256d0c2fb917860a2c170cb7.setIcon(icon_1475130f02a2b60b3b3759287bc4ee1f);
+            
+    
+            var marker_7a88bb7937701e513e9f75bbd5a29e3e = L.marker(
+                [51.6044, -0.0665],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_8a9a4ac262a4a08b213e9d3ec31924fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_d0c204e15a1d56efa6165375f0901314 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0a627444724c3afb6d2fa7a36a3b08f8 = $(`<div id="html_0a627444724c3afb6d2fa7a36a3b08f8" style="width: 100.0%; height: 100.0%;"><b>Tottenham</b><br>Tottenham Hotspur Stadium</div>`)[0];
+                popup_d0c204e15a1d56efa6165375f0901314.setContent(html_0a627444724c3afb6d2fa7a36a3b08f8);
+            
+        
+
+        marker_7a88bb7937701e513e9f75bbd5a29e3e.bindPopup(popup_d0c204e15a1d56efa6165375f0901314)
+        ;
+
+        
+    
+    
+            marker_7a88bb7937701e513e9f75bbd5a29e3e.bindTooltip(
+                `<div>
+                     Tottenham </br> Tottenham Hotspur Stadium</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a88bb7937701e513e9f75bbd5a29e3e.setIcon(icon_8a9a4ac262a4a08b213e9d3ec31924fb);
+            
+    
+            var marker_260d29461be1cdc680253954d22f4ab2 = L.marker(
+                [52.4481, -1.4956],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_58119d79667ca5a52f0ad4029377b7bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_d9ffc2b331eee240c5c5bdc6e23fbf2b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6bc18a7b7201761bf91b9955f254f144 = $(`<div id="html_6bc18a7b7201761bf91b9955f254f144" style="width: 100.0%; height: 100.0%;"><b>Coventry City</b><br>Coventry Building Society Arena</div>`)[0];
+                popup_d9ffc2b331eee240c5c5bdc6e23fbf2b.setContent(html_6bc18a7b7201761bf91b9955f254f144);
+            
+        
+
+        marker_260d29461be1cdc680253954d22f4ab2.bindPopup(popup_d9ffc2b331eee240c5c5bdc6e23fbf2b)
+        ;
+
+        
+    
+    
+            marker_260d29461be1cdc680253954d22f4ab2.bindTooltip(
+                `<div>
+                     Coventry City </br> Coventry Building Society Arena</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_260d29461be1cdc680253954d22f4ab2.setIcon(icon_58119d79667ca5a52f0ad4029377b7bc);
+            
+    
+            var marker_df3453f53a0684055bced6a70fb239e6 = L.marker(
+                [52.055, 1.14528],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_f0af08b71a8b09b77832744778649df3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 3,
+}
+            );
+        
+    
+        var popup_46642c8696e6702be8b0cb2eebfcc396 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b389ee02987abefed927871444a3bc47 = $(`<div id="html_b389ee02987abefed927871444a3bc47" style="width: 100.0%; height: 100.0%;"><b>Ipswich Town</b><br>Portman Road</div>`)[0];
+                popup_46642c8696e6702be8b0cb2eebfcc396.setContent(html_b389ee02987abefed927871444a3bc47);
+            
+        
+
+        marker_df3453f53a0684055bced6a70fb239e6.bindPopup(popup_46642c8696e6702be8b0cb2eebfcc396)
+        ;
+
+        
+    
+    
+            marker_df3453f53a0684055bced6a70fb239e6.bindTooltip(
+                `<div>
+                     Ipswich Town </br> Portman Road</br> Premier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df3453f53a0684055bced6a70fb239e6.setIcon(icon_f0af08b71a8b09b77832744778649df3);
+            
+    
+            var marker_c57352d354a8e1184075fb66bd6af3af = L.marker(
+                [52.4758, -1.8683],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_de60e9581d80d85164392c7f0ec43f17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_4ef25779fe72216edd92df6cc5d3379f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0044fea29bae7cf68dd781d23f85df08 = $(`<div id="html_0044fea29bae7cf68dd781d23f85df08" style="width: 100.0%; height: 100.0%;"><b>Birmingham City</b><br>St Andrew's</div>`)[0];
+                popup_4ef25779fe72216edd92df6cc5d3379f.setContent(html_0044fea29bae7cf68dd781d23f85df08);
+            
+        
+
+        marker_c57352d354a8e1184075fb66bd6af3af.bindPopup(popup_4ef25779fe72216edd92df6cc5d3379f)
+        ;
+
+        
+    
+    
+            marker_c57352d354a8e1184075fb66bd6af3af.bindTooltip(
+                `<div>
+                     Birmingham City </br> St Andrew's</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c57352d354a8e1184075fb66bd6af3af.setIcon(icon_de60e9581d80d85164392c7f0ec43f17);
+            
+    
+            var marker_07764b36f3d737f326905a32eb52fbb4 = L.marker(
+                [53.7286, -2.4892],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_7dfd7bf58d18b158d801847e1c46c66f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_486a78dc8173817790634916bdf213ec = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6408062d9f6dc34b5b7067070bcf03be = $(`<div id="html_6408062d9f6dc34b5b7067070bcf03be" style="width: 100.0%; height: 100.0%;"><b>Blackburn Rovers</b><br>Ewood Park</div>`)[0];
+                popup_486a78dc8173817790634916bdf213ec.setContent(html_6408062d9f6dc34b5b7067070bcf03be);
+            
+        
+
+        marker_07764b36f3d737f326905a32eb52fbb4.bindPopup(popup_486a78dc8173817790634916bdf213ec)
+        ;
+
+        
+    
+    
+            marker_07764b36f3d737f326905a32eb52fbb4.bindTooltip(
+                `<div>
+                     Blackburn Rovers </br> Ewood Park</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07764b36f3d737f326905a32eb52fbb4.setIcon(icon_7dfd7bf58d18b158d801847e1c46c66f);
+            
+    
+            var marker_03f68dc126cc909416513438e10c4b89 = L.marker(
+                [53.5805, -2.5357],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_ddb4804b41951f68b8d4597333a9c54a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_e180013bebe135dc54a037a10562b8d2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d282814df0697986aef7a6d850f82e2b = $(`<div id="html_d282814df0697986aef7a6d850f82e2b" style="width: 100.0%; height: 100.0%;"><b>Bolton Wanderers</b><br>Toughsheet Community Stadium</div>`)[0];
+                popup_e180013bebe135dc54a037a10562b8d2.setContent(html_d282814df0697986aef7a6d850f82e2b);
+            
+        
+
+        marker_03f68dc126cc909416513438e10c4b89.bindPopup(popup_e180013bebe135dc54a037a10562b8d2)
+        ;
+
+        
+    
+    
+            marker_03f68dc126cc909416513438e10c4b89.bindTooltip(
+                `<div>
+                     Bolton Wanderers </br> Toughsheet Community Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_03f68dc126cc909416513438e10c4b89.setIcon(icon_ddb4804b41951f68b8d4597333a9c54a);
+            
+    
+            var marker_999ca4e8662f8573a07aa6d652be9218 = L.marker(
+                [51.44, -2.6206],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_7cf501c2519dcc5748985ad5a4aab3f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_8752bbadff51d95cc5bcec64b5dd8e5d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_caf1100e20112cdc6b9173a3ffe0fbe2 = $(`<div id="html_caf1100e20112cdc6b9173a3ffe0fbe2" style="width: 100.0%; height: 100.0%;"><b>Bristol City</b><br>Ashton Gate</div>`)[0];
+                popup_8752bbadff51d95cc5bcec64b5dd8e5d.setContent(html_caf1100e20112cdc6b9173a3ffe0fbe2);
+            
+        
+
+        marker_999ca4e8662f8573a07aa6d652be9218.bindPopup(popup_8752bbadff51d95cc5bcec64b5dd8e5d)
+        ;
+
+        
+    
+    
+            marker_999ca4e8662f8573a07aa6d652be9218.bindTooltip(
+                `<div>
+                     Bristol City </br> Ashton Gate</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_999ca4e8662f8573a07aa6d652be9218.setIcon(icon_7cf501c2519dcc5748985ad5a4aab3f9);
+            
+    
+            var marker_9ca94e1b6bb2adef848fe506effcb2ea = L.marker(
+                [53.789, -2.23],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_8b0589bd60d6c94eb2c4381b799fcc54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_4c521bd0e2d0e5173c3b0bb796bbc6e0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_724113aaa20e8060e049a76b967e3bb1 = $(`<div id="html_724113aaa20e8060e049a76b967e3bb1" style="width: 100.0%; height: 100.0%;"><b>Burnley</b><br>Turf Moor</div>`)[0];
+                popup_4c521bd0e2d0e5173c3b0bb796bbc6e0.setContent(html_724113aaa20e8060e049a76b967e3bb1);
+            
+        
+
+        marker_9ca94e1b6bb2adef848fe506effcb2ea.bindPopup(popup_4c521bd0e2d0e5173c3b0bb796bbc6e0)
+        ;
+
+        
+    
+    
+            marker_9ca94e1b6bb2adef848fe506effcb2ea.bindTooltip(
+                `<div>
+                     Burnley </br> Turf Moor</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ca94e1b6bb2adef848fe506effcb2ea.setIcon(icon_8b0589bd60d6c94eb2c4381b799fcc54);
+            
+    
+            var marker_b89e6e732bff5bccf23e9b03352b19ac = L.marker(
+                [51.4728, -3.2031],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_d88f82bbcf761e26c8563f9f70f32a19 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_90daf6f01fc94ad8c03232949758292c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d532c1a5a5dfbc9e272dab6f38e1e416 = $(`<div id="html_d532c1a5a5dfbc9e272dab6f38e1e416" style="width: 100.0%; height: 100.0%;"><b>Cardiff City</b><br>Cardiff City Stadium</div>`)[0];
+                popup_90daf6f01fc94ad8c03232949758292c.setContent(html_d532c1a5a5dfbc9e272dab6f38e1e416);
+            
+        
+
+        marker_b89e6e732bff5bccf23e9b03352b19ac.bindPopup(popup_90daf6f01fc94ad8c03232949758292c)
+        ;
+
+        
+    
+    
+            marker_b89e6e732bff5bccf23e9b03352b19ac.bindTooltip(
+                `<div>
+                     Cardiff City </br> Cardiff City Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b89e6e732bff5bccf23e9b03352b19ac.setIcon(icon_d88f82bbcf761e26c8563f9f70f32a19);
+            
+    
+            var marker_5ad77b8a3b1c6449100474f8e67f4759 = L.marker(
+                [51.4865, 0.0364],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_43417b445eb38bf09d4dc7e1cbed09fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_360774b84daafdb087d77e9ddfc6a15a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_10c666a0e435a8f2359acd5fa062f8fc = $(`<div id="html_10c666a0e435a8f2359acd5fa062f8fc" style="width: 100.0%; height: 100.0%;"><b>Charlton Athletic</b><br>The Valley</div>`)[0];
+                popup_360774b84daafdb087d77e9ddfc6a15a.setContent(html_10c666a0e435a8f2359acd5fa062f8fc);
+            
+        
+
+        marker_5ad77b8a3b1c6449100474f8e67f4759.bindPopup(popup_360774b84daafdb087d77e9ddfc6a15a)
+        ;
+
+        
+    
+    
+            marker_5ad77b8a3b1c6449100474f8e67f4759.bindTooltip(
+                `<div>
+                     Charlton Athletic </br> The Valley</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ad77b8a3b1c6449100474f8e67f4759.setIcon(icon_43417b445eb38bf09d4dc7e1cbed09fb);
+            
+    
+            var marker_5d509bb8d02c39f753fcb362274fb6ad = L.marker(
+                [52.915, -1.447],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_5b6d3e01103c7568d67c2a6907157fa9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_122bdca395fca6aeea4569323029ff01 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e62b6a2b918d1db9e0ec32a69fccd6fe = $(`<div id="html_e62b6a2b918d1db9e0ec32a69fccd6fe" style="width: 100.0%; height: 100.0%;"><b>Derby County</b><br>Pride Park Stadium</div>`)[0];
+                popup_122bdca395fca6aeea4569323029ff01.setContent(html_e62b6a2b918d1db9e0ec32a69fccd6fe);
+            
+        
+
+        marker_5d509bb8d02c39f753fcb362274fb6ad.bindPopup(popup_122bdca395fca6aeea4569323029ff01)
+        ;
+
+        
+    
+    
+            marker_5d509bb8d02c39f753fcb362274fb6ad.bindTooltip(
+                `<div>
+                     Derby County </br> Pride Park Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d509bb8d02c39f753fcb362274fb6ad.setIcon(icon_5b6d3e01103c7568d67c2a6907157fa9);
+            
+    
+            var marker_d34a6ac7c9f64449ade01eb01786a266 = L.marker(
+                [53.2182, -0.5403],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_c4ff77af286abe1d249950d4ca9596b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_2121e0ee45b1a3ea72380442af1d7784 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ebb80cf391fc6fee1372082fb14a1202 = $(`<div id="html_ebb80cf391fc6fee1372082fb14a1202" style="width: 100.0%; height: 100.0%;"><b>Lincoln City</b><br>Sincil Bank (LNER Stadium)</div>`)[0];
+                popup_2121e0ee45b1a3ea72380442af1d7784.setContent(html_ebb80cf391fc6fee1372082fb14a1202);
+            
+        
+
+        marker_d34a6ac7c9f64449ade01eb01786a266.bindPopup(popup_2121e0ee45b1a3ea72380442af1d7784)
+        ;
+
+        
+    
+    
+            marker_d34a6ac7c9f64449ade01eb01786a266.bindTooltip(
+                `<div>
+                     Lincoln City </br> Sincil Bank (LNER Stadium)</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d34a6ac7c9f64449ade01eb01786a266.setIcon(icon_c4ff77af286abe1d249950d4ca9596b6);
+            
+    
+            var marker_888972dbfae813a417d3df163438aaf7 = L.marker(
+                [54.5783, -1.2169],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b2070c57eb6f0beaaaf0eaf44c795012 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_9fb638191d976d889ad9b944d330f5aa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_54e8eb4c6db85d4929373a337ca2dd04 = $(`<div id="html_54e8eb4c6db85d4929373a337ca2dd04" style="width: 100.0%; height: 100.0%;"><b>Middlesbrough</b><br>Riverside Stadium</div>`)[0];
+                popup_9fb638191d976d889ad9b944d330f5aa.setContent(html_54e8eb4c6db85d4929373a337ca2dd04);
+            
+        
+
+        marker_888972dbfae813a417d3df163438aaf7.bindPopup(popup_9fb638191d976d889ad9b944d330f5aa)
+        ;
+
+        
+    
+    
+            marker_888972dbfae813a417d3df163438aaf7.bindTooltip(
+                `<div>
+                     Middlesbrough </br> Riverside Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_888972dbfae813a417d3df163438aaf7.setIcon(icon_b2070c57eb6f0beaaaf0eaf44c795012);
+            
+    
+            var marker_455316117a4c71e4474e9a52d7187c72 = L.marker(
+                [51.486, -0.0507],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_706b3d3e519432b0831edcc781b4acc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_be21b61ec0415231e482c9ecfbec0797 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2dce8c783f2cedc4a6df6c8a1f771557 = $(`<div id="html_2dce8c783f2cedc4a6df6c8a1f771557" style="width: 100.0%; height: 100.0%;"><b>Millwall</b><br>The Den</div>`)[0];
+                popup_be21b61ec0415231e482c9ecfbec0797.setContent(html_2dce8c783f2cedc4a6df6c8a1f771557);
+            
+        
+
+        marker_455316117a4c71e4474e9a52d7187c72.bindPopup(popup_be21b61ec0415231e482c9ecfbec0797)
+        ;
+
+        
+    
+    
+            marker_455316117a4c71e4474e9a52d7187c72.bindTooltip(
+                `<div>
+                     Millwall </br> The Den</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_455316117a4c71e4474e9a52d7187c72.setIcon(icon_706b3d3e519432b0831edcc781b4acc4);
+            
+    
+            var marker_4e2f38e06df5443cdb5f62a84ab600f7 = L.marker(
+                [52.622, 1.3091],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_afa403c0d2916483aa57e153b1162e04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_1fe7830c53511f39a0cb77d0b84c6b76 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5278dcedd50fda9c9bc75dc36404f764 = $(`<div id="html_5278dcedd50fda9c9bc75dc36404f764" style="width: 100.0%; height: 100.0%;"><b>Norwich City</b><br>Carrow Road</div>`)[0];
+                popup_1fe7830c53511f39a0cb77d0b84c6b76.setContent(html_5278dcedd50fda9c9bc75dc36404f764);
+            
+        
+
+        marker_4e2f38e06df5443cdb5f62a84ab600f7.bindPopup(popup_1fe7830c53511f39a0cb77d0b84c6b76)
+        ;
+
+        
+    
+    
+            marker_4e2f38e06df5443cdb5f62a84ab600f7.bindTooltip(
+                `<div>
+                     Norwich City </br> Carrow Road</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e2f38e06df5443cdb5f62a84ab600f7.setIcon(icon_afa403c0d2916483aa57e153b1162e04);
+            
+    
+            var marker_4533d9849337376a1b8e7f64bd2fc483 = L.marker(
+                [50.7963, -1.0639],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_8a2ae975090a287dcdc1c0de367806fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_bb6c82ef77644c21622fbc6ec06a498b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b846ddfa89721c9bd685e825da9db91b = $(`<div id="html_b846ddfa89721c9bd685e825da9db91b" style="width: 100.0%; height: 100.0%;"><b>Portsmouth</b><br>Fratton Park</div>`)[0];
+                popup_bb6c82ef77644c21622fbc6ec06a498b.setContent(html_b846ddfa89721c9bd685e825da9db91b);
+            
+        
+
+        marker_4533d9849337376a1b8e7f64bd2fc483.bindPopup(popup_bb6c82ef77644c21622fbc6ec06a498b)
+        ;
+
+        
+    
+    
+            marker_4533d9849337376a1b8e7f64bd2fc483.bindTooltip(
+                `<div>
+                     Portsmouth </br> Fratton Park</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4533d9849337376a1b8e7f64bd2fc483.setIcon(icon_8a2ae975090a287dcdc1c0de367806fc);
+            
+    
+            var marker_1554057ff2a573873f4d32c6d314eca5 = L.marker(
+                [53.7722, -2.6883],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_71c1595358b441dfcce269a099eb5dfe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_508c038bbc3e80e3362bbfbe91ae69fb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c0c69cfbce2900385b3af7d00706e8b4 = $(`<div id="html_c0c69cfbce2900385b3af7d00706e8b4" style="width: 100.0%; height: 100.0%;"><b>Preston North End</b><br>Deepdale</div>`)[0];
+                popup_508c038bbc3e80e3362bbfbe91ae69fb.setContent(html_c0c69cfbce2900385b3af7d00706e8b4);
+            
+        
+
+        marker_1554057ff2a573873f4d32c6d314eca5.bindPopup(popup_508c038bbc3e80e3362bbfbe91ae69fb)
+        ;
+
+        
+    
+    
+            marker_1554057ff2a573873f4d32c6d314eca5.bindTooltip(
+                `<div>
+                     Preston North End </br> Deepdale</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1554057ff2a573873f4d32c6d314eca5.setIcon(icon_71c1595358b441dfcce269a099eb5dfe);
+            
+    
+            var marker_07798c73855dd4041430e03d05620b87 = L.marker(
+                [51.5093, -0.232],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_804757659425e207decad6637ca1c72f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_711140b999aa060cb118344f4407282f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_93aa0091236f63c3ef0638ebea617d22 = $(`<div id="html_93aa0091236f63c3ef0638ebea617d22" style="width: 100.0%; height: 100.0%;"><b>Queens Park Rangers</b><br>Loftus Road</div>`)[0];
+                popup_711140b999aa060cb118344f4407282f.setContent(html_93aa0091236f63c3ef0638ebea617d22);
+            
+        
+
+        marker_07798c73855dd4041430e03d05620b87.bindPopup(popup_711140b999aa060cb118344f4407282f)
+        ;
+
+        
+    
+    
+            marker_07798c73855dd4041430e03d05620b87.bindTooltip(
+                `<div>
+                     Queens Park Rangers </br> Loftus Road</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07798c73855dd4041430e03d05620b87.setIcon(icon_804757659425e207decad6637ca1c72f);
+            
+    
+            var marker_92a33e3f80335f03b5541b489262a149 = L.marker(
+                [53.3703, -1.4709],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_a173ac6c3dcd13aa05f9b85509292105 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_837cb9d667c7be986f68ffd88c940e2b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f9b0daaffce6a820db871e6bb69c97ac = $(`<div id="html_f9b0daaffce6a820db871e6bb69c97ac" style="width: 100.0%; height: 100.0%;"><b>Sheffield United</b><br>Bramall Lane</div>`)[0];
+                popup_837cb9d667c7be986f68ffd88c940e2b.setContent(html_f9b0daaffce6a820db871e6bb69c97ac);
+            
+        
+
+        marker_92a33e3f80335f03b5541b489262a149.bindPopup(popup_837cb9d667c7be986f68ffd88c940e2b)
+        ;
+
+        
+    
+    
+            marker_92a33e3f80335f03b5541b489262a149.bindTooltip(
+                `<div>
+                     Sheffield United </br> Bramall Lane</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_92a33e3f80335f03b5541b489262a149.setIcon(icon_a173ac6c3dcd13aa05f9b85509292105);
+            
+    
+            var marker_00973f69a768eef12d5c17dfe2887681 = L.marker(
+                [50.9058, -1.3911],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_5715a87e5920da3b54c6b7c26f43e937 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_c1a0bd1f4d9edabc3629ae8f3691b5c5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_62ec71068d7ec051e613344840fb4ca6 = $(`<div id="html_62ec71068d7ec051e613344840fb4ca6" style="width: 100.0%; height: 100.0%;"><b>Southampton</b><br>St Mary's Stadium</div>`)[0];
+                popup_c1a0bd1f4d9edabc3629ae8f3691b5c5.setContent(html_62ec71068d7ec051e613344840fb4ca6);
+            
+        
+
+        marker_00973f69a768eef12d5c17dfe2887681.bindPopup(popup_c1a0bd1f4d9edabc3629ae8f3691b5c5)
+        ;
+
+        
+    
+    
+            marker_00973f69a768eef12d5c17dfe2887681.bindTooltip(
+                `<div>
+                     Southampton </br> St Mary's Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00973f69a768eef12d5c17dfe2887681.setIcon(icon_5715a87e5920da3b54c6b7c26f43e937);
+            
+    
+            var marker_af0337bd3fc023948b05131219a4a788 = L.marker(
+                [52.9883, -2.1756],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_3aafb9e82276831eded5b8bf1ea74f0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_b7910ec4c971b81f0e7b3e53763c9ae6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2d5e72c0b61331b37eee06657f743227 = $(`<div id="html_2d5e72c0b61331b37eee06657f743227" style="width: 100.0%; height: 100.0%;"><b>Stoke City</b><br>bet365 Stadium</div>`)[0];
+                popup_b7910ec4c971b81f0e7b3e53763c9ae6.setContent(html_2d5e72c0b61331b37eee06657f743227);
+            
+        
+
+        marker_af0337bd3fc023948b05131219a4a788.bindPopup(popup_b7910ec4c971b81f0e7b3e53763c9ae6)
+        ;
+
+        
+    
+    
+            marker_af0337bd3fc023948b05131219a4a788.bindTooltip(
+                `<div>
+                     Stoke City </br> bet365 Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af0337bd3fc023948b05131219a4a788.setIcon(icon_3aafb9e82276831eded5b8bf1ea74f0a);
+            
+    
+            var marker_179c1906b50d84397635a0e903e76724 = L.marker(
+                [51.6422, -3.9347],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b681e80e7bd1f28132c2fa7b11b44411 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_17fb7ccc9358c44d573713f9eb953ffd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_16d9f353f004c86a28705b34fbe64935 = $(`<div id="html_16d9f353f004c86a28705b34fbe64935" style="width: 100.0%; height: 100.0%;"><b>Swansea City</b><br>Swansea.com Stadium</div>`)[0];
+                popup_17fb7ccc9358c44d573713f9eb953ffd.setContent(html_16d9f353f004c86a28705b34fbe64935);
+            
+        
+
+        marker_179c1906b50d84397635a0e903e76724.bindPopup(popup_17fb7ccc9358c44d573713f9eb953ffd)
+        ;
+
+        
+    
+    
+            marker_179c1906b50d84397635a0e903e76724.bindTooltip(
+                `<div>
+                     Swansea City </br> Swansea.com Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_179c1906b50d84397635a0e903e76724.setIcon(icon_b681e80e7bd1f28132c2fa7b11b44411);
+            
+    
+            var marker_d7e6431a9a1362d24712271a2fd5dd57 = L.marker(
+                [53.0506, -2.9931],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_3e34d60f93bd8d3a7c71244a3520ef15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_a2bed3e8e0c532f4093a159888ccb278 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_08871ede7d960ed8a92b472055d215cc = $(`<div id="html_08871ede7d960ed8a92b472055d215cc" style="width: 100.0%; height: 100.0%;"><b>Wrexham</b><br>Racecourse Ground (SToK Cae Ras)</div>`)[0];
+                popup_a2bed3e8e0c532f4093a159888ccb278.setContent(html_08871ede7d960ed8a92b472055d215cc);
+            
+        
+
+        marker_d7e6431a9a1362d24712271a2fd5dd57.bindPopup(popup_a2bed3e8e0c532f4093a159888ccb278)
+        ;
+
+        
+    
+    
+            marker_d7e6431a9a1362d24712271a2fd5dd57.bindTooltip(
+                `<div>
+                     Wrexham </br> Racecourse Ground (SToK Cae Ras)</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d7e6431a9a1362d24712271a2fd5dd57.setIcon(icon_3e34d60f93bd8d3a7c71244a3520ef15);
+            
+    
+            var marker_12d39dd976198d9dadef49ef62e3ad25 = L.marker(
+                [51.5386, -0.0166],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_49e5d99c8044b4b3cba9b076e2a04c1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_79e65cd515413f3c434d0814aef88c0f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_968fca86b2a9e2c5e7080827050ff62a = $(`<div id="html_968fca86b2a9e2c5e7080827050ff62a" style="width: 100.0%; height: 100.0%;"><b>West Ham United</b><br>London Stadium</div>`)[0];
+                popup_79e65cd515413f3c434d0814aef88c0f.setContent(html_968fca86b2a9e2c5e7080827050ff62a);
+            
+        
+
+        marker_12d39dd976198d9dadef49ef62e3ad25.bindPopup(popup_79e65cd515413f3c434d0814aef88c0f)
+        ;
+
+        
+    
+    
+            marker_12d39dd976198d9dadef49ef62e3ad25.bindTooltip(
+                `<div>
+                     West Ham United </br> London Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12d39dd976198d9dadef49ef62e3ad25.setIcon(icon_49e5d99c8044b4b3cba9b076e2a04c1c);
+            
+    
+            var marker_45c4509fea81f1d91772ba47139d1e01 = L.marker(
+                [52.5903, -2.1303],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_ac4b5e6836026c8181301abd316c705b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 2,
+}
+            );
+        
+    
+        var popup_b85c82e8ec361c21888ebd30536f1135 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_22faf712bcbff7913d18ea8eb7db0056 = $(`<div id="html_22faf712bcbff7913d18ea8eb7db0056" style="width: 100.0%; height: 100.0%;"><b>Wolverhampton Wanderers</b><br>Molineux Stadium</div>`)[0];
+                popup_b85c82e8ec361c21888ebd30536f1135.setContent(html_22faf712bcbff7913d18ea8eb7db0056);
+            
+        
+
+        marker_45c4509fea81f1d91772ba47139d1e01.bindPopup(popup_b85c82e8ec361c21888ebd30536f1135)
+        ;
+
+        
+    
+    
+            marker_45c4509fea81f1d91772ba47139d1e01.bindTooltip(
+                `<div>
+                     Wolverhampton Wanderers </br> Molineux Stadium</br> Championship
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45c4509fea81f1d91772ba47139d1e01.setIcon(icon_ac4b5e6836026c8181301abd316c705b);
+            
+    
+            var marker_5d17e7dd074feca5d9e7ef35ae09ddf6 = L.marker(
+                [51.4317, -0.1911],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_e303e0c719e6deabb93a53f23268d650 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_0b41e08ed314941d27b27f0e59f7838d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_daf7923ee3bf0a47efe025442c9d5b3d = $(`<div id="html_daf7923ee3bf0a47efe025442c9d5b3d" style="width: 100.0%; height: 100.0%;"><b>AFC Wimbledon</b><br>Plough Lane</div>`)[0];
+                popup_0b41e08ed314941d27b27f0e59f7838d.setContent(html_daf7923ee3bf0a47efe025442c9d5b3d);
+            
+        
+
+        marker_5d17e7dd074feca5d9e7ef35ae09ddf6.bindPopup(popup_0b41e08ed314941d27b27f0e59f7838d)
+        ;
+
+        
+    
+    
+            marker_5d17e7dd074feca5d9e7ef35ae09ddf6.bindTooltip(
+                `<div>
+                     AFC Wimbledon </br> Plough Lane</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d17e7dd074feca5d9e7ef35ae09ddf6.setIcon(icon_e303e0c719e6deabb93a53f23268d650);
+            
+    
+            var marker_ebf21ff3694559b0a86368f2d2e383ed = L.marker(
+                [53.5522, -1.4677],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_3522f3f7ab54d4de09fffedfdd075669 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_b5725b96102a6c74188b4082ceeafb6c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_03f67be8f4a6434c4a08a822b81162be = $(`<div id="html_03f67be8f4a6434c4a08a822b81162be" style="width: 100.0%; height: 100.0%;"><b>Barnsley</b><br>Oakwell</div>`)[0];
+                popup_b5725b96102a6c74188b4082ceeafb6c.setContent(html_03f67be8f4a6434c4a08a822b81162be);
+            
+        
+
+        marker_ebf21ff3694559b0a86368f2d2e383ed.bindPopup(popup_b5725b96102a6c74188b4082ceeafb6c)
+        ;
+
+        
+    
+    
+            marker_ebf21ff3694559b0a86368f2d2e383ed.bindTooltip(
+                `<div>
+                     Barnsley </br> Oakwell</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebf21ff3694559b0a86368f2d2e383ed.setIcon(icon_3522f3f7ab54d4de09fffedfdd075669);
+            
+    
+            var marker_6925ca4bd4236b6db78e76496fbe67f6 = L.marker(
+                [53.8046, -3.0481],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_76356fac10b1c2dd9caeb7f8f23698ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_faae58e4653e7e6c181c7d5a7172ae9f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cefdf62cb5f60c88ddd42c4eaff6e6b9 = $(`<div id="html_cefdf62cb5f60c88ddd42c4eaff6e6b9" style="width: 100.0%; height: 100.0%;"><b>Blackpool</b><br>Bloomfield Road</div>`)[0];
+                popup_faae58e4653e7e6c181c7d5a7172ae9f.setContent(html_cefdf62cb5f60c88ddd42c4eaff6e6b9);
+            
+        
+
+        marker_6925ca4bd4236b6db78e76496fbe67f6.bindPopup(popup_faae58e4653e7e6c181c7d5a7172ae9f)
+        ;
+
+        
+    
+    
+            marker_6925ca4bd4236b6db78e76496fbe67f6.bindTooltip(
+                `<div>
+                     Blackpool </br> Bloomfield Road</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6925ca4bd4236b6db78e76496fbe67f6.setIcon(icon_76356fac10b1c2dd9caeb7f8f23698ca);
+            
+    
+            var marker_b84fa06ac6aa383fc7c4e6dafa5939b0 = L.marker(
+                [53.8042, -1.7592],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_cb21caf61e80171ee87d6c0cd18c33f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_31265804015f1e543e10e352a660fc28 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_42996aad7dcef950d497c2067751db8a = $(`<div id="html_42996aad7dcef950d497c2067751db8a" style="width: 100.0%; height: 100.0%;"><b>Bradford City</b><br>Valley Parade</div>`)[0];
+                popup_31265804015f1e543e10e352a660fc28.setContent(html_42996aad7dcef950d497c2067751db8a);
+            
+        
+
+        marker_b84fa06ac6aa383fc7c4e6dafa5939b0.bindPopup(popup_31265804015f1e543e10e352a660fc28)
+        ;
+
+        
+    
+    
+            marker_b84fa06ac6aa383fc7c4e6dafa5939b0.bindTooltip(
+                `<div>
+                     Bradford City </br> Valley Parade</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b84fa06ac6aa383fc7c4e6dafa5939b0.setIcon(icon_cb21caf61e80171ee87d6c0cd18c33f2);
+            
+    
+            var marker_421e6bb6a4204d3f6410af72b8df750b = L.marker(
+                [51.3942, 0.0203],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_27dbd1b033fd5fa84ba2ad76f2c87d48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_e7976537fae86f4ee3f589e525054bc5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6c6b3815785192b69202ff5635a0cebe = $(`<div id="html_6c6b3815785192b69202ff5635a0cebe" style="width: 100.0%; height: 100.0%;"><b>Bromley</b><br>Hayes Lane</div>`)[0];
+                popup_e7976537fae86f4ee3f589e525054bc5.setContent(html_6c6b3815785192b69202ff5635a0cebe);
+            
+        
+
+        marker_421e6bb6a4204d3f6410af72b8df750b.bindPopup(popup_e7976537fae86f4ee3f589e525054bc5)
+        ;
+
+        
+    
+    
+            marker_421e6bb6a4204d3f6410af72b8df750b.bindTooltip(
+                `<div>
+                     Bromley </br> Hayes Lane</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_421e6bb6a4204d3f6410af72b8df750b.setIcon(icon_27dbd1b033fd5fa84ba2ad76f2c87d48);
+            
+    
+            var marker_bda9d6a657c8e723bad73de38449097e = L.marker(
+                [52.8217, -1.6275],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b22b3d355b7f58c1aca27e41fbc1b4d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_5bc186b011d873c4887839b785e8a77f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1ca47a4f02098876b93dce53cad58898 = $(`<div id="html_1ca47a4f02098876b93dce53cad58898" style="width: 100.0%; height: 100.0%;"><b>Burton Albion</b><br>Pirelli Stadium</div>`)[0];
+                popup_5bc186b011d873c4887839b785e8a77f.setContent(html_1ca47a4f02098876b93dce53cad58898);
+            
+        
+
+        marker_bda9d6a657c8e723bad73de38449097e.bindPopup(popup_5bc186b011d873c4887839b785e8a77f)
+        ;
+
+        
+    
+    
+            marker_bda9d6a657c8e723bad73de38449097e.bindTooltip(
+                `<div>
+                     Burton Albion </br> Pirelli Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bda9d6a657c8e723bad73de38449097e.setIcon(icon_b22b3d355b7f58c1aca27e41fbc1b4d8);
+            
+    
+            var marker_e964cb48118290db9865b9c6f9ef6c23 = L.marker(
+                [52.2122, 0.1542],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_cd657f628b481c77cd1b0f0bf2da62cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_1c935e6f339993b2347ca1b46149cb9a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6a236f221b7abcf8a807ccf562af8324 = $(`<div id="html_6a236f221b7abcf8a807ccf562af8324" style="width: 100.0%; height: 100.0%;"><b>Cambridge United</b><br>Abbey Stadium</div>`)[0];
+                popup_1c935e6f339993b2347ca1b46149cb9a.setContent(html_6a236f221b7abcf8a807ccf562af8324);
+            
+        
+
+        marker_e964cb48118290db9865b9c6f9ef6c23.bindPopup(popup_1c935e6f339993b2347ca1b46149cb9a)
+        ;
+
+        
+    
+    
+            marker_e964cb48118290db9865b9c6f9ef6c23.bindTooltip(
+                `<div>
+                     Cambridge United </br> Abbey Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e964cb48118290db9865b9c6f9ef6c23.setIcon(icon_cd657f628b481c77cd1b0f0bf2da62cd);
+            
+    
+            var marker_33937f21813082fceb63498b20955126 = L.marker(
+                [53.5097, -1.1133],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_e1ebc1b810c34e533cf1420af3ea94cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_43ba53d7b0eeab176caf6220ce40f968 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_648c70e26e543a9406be151ced664f53 = $(`<div id="html_648c70e26e543a9406be151ced664f53" style="width: 100.0%; height: 100.0%;"><b>Doncaster Rovers</b><br>Eco-Power Stadium</div>`)[0];
+                popup_43ba53d7b0eeab176caf6220ce40f968.setContent(html_648c70e26e543a9406be151ced664f53);
+            
+        
+
+        marker_33937f21813082fceb63498b20955126.bindPopup(popup_43ba53d7b0eeab176caf6220ce40f968)
+        ;
+
+        
+    
+    
+            marker_33937f21813082fceb63498b20955126.bindTooltip(
+                `<div>
+                     Doncaster Rovers </br> Eco-Power Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_33937f21813082fceb63498b20955126.setIcon(icon_e1ebc1b810c34e533cf1420af3ea94cb);
+            
+    
+            var marker_63bfdf61d33ffbc825600ee4a6a4a664 = L.marker(
+                [53.6542, -1.7682],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_df8b1782fe2b31c2148324c531b37192 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_a7c9a350e8bbb02b685a4a181a3457f0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6d1fbddeabdeefd9dfad65db5818b490 = $(`<div id="html_6d1fbddeabdeefd9dfad65db5818b490" style="width: 100.0%; height: 100.0%;"><b>Huddersfield Town</b><br>Kirklees Stadium</div>`)[0];
+                popup_a7c9a350e8bbb02b685a4a181a3457f0.setContent(html_6d1fbddeabdeefd9dfad65db5818b490);
+            
+        
+
+        marker_63bfdf61d33ffbc825600ee4a6a4a664.bindPopup(popup_a7c9a350e8bbb02b685a4a181a3457f0)
+        ;
+
+        
+    
+    
+            marker_63bfdf61d33ffbc825600ee4a6a4a664.bindTooltip(
+                `<div>
+                     Huddersfield Town </br> Kirklees Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63bfdf61d33ffbc825600ee4a6a4a664.setIcon(icon_df8b1782fe2b31c2148324c531b37192);
+            
+    
+            var marker_55f65216fdc7cc735023f3a76b990f2d = L.marker(
+                [52.6204, -1.1422],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_ef9e79ade702169969a78c3f8b8dec1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_43f41b895cb50855ce40cf624da6081a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_48a8b6baa47e6a173e650a4f1306ee77 = $(`<div id="html_48a8b6baa47e6a173e650a4f1306ee77" style="width: 100.0%; height: 100.0%;"><b>Leicester City</b><br>King Power Stadium</div>`)[0];
+                popup_43f41b895cb50855ce40cf624da6081a.setContent(html_48a8b6baa47e6a173e650a4f1306ee77);
+            
+        
+
+        marker_55f65216fdc7cc735023f3a76b990f2d.bindPopup(popup_43f41b895cb50855ce40cf624da6081a)
+        ;
+
+        
+    
+    
+            marker_55f65216fdc7cc735023f3a76b990f2d.bindTooltip(
+                `<div>
+                     Leicester City </br> King Power Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55f65216fdc7cc735023f3a76b990f2d.setIcon(icon_ef9e79ade702169969a78c3f8b8dec1d);
+            
+    
+            var marker_7b9290c905f3797de46638fbdfa06721 = L.marker(
+                [51.5601, -0.0125],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_8e929b3c6ccf522098ebe3a9722cd20d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_be1a432ce711466f3426009630c8ce34 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_71b51002eca501034d843f7d2432ae0e = $(`<div id="html_71b51002eca501034d843f7d2432ae0e" style="width: 100.0%; height: 100.0%;"><b>Leyton Orient</b><br>Brisbane Road</div>`)[0];
+                popup_be1a432ce711466f3426009630c8ce34.setContent(html_71b51002eca501034d843f7d2432ae0e);
+            
+        
+
+        marker_7b9290c905f3797de46638fbdfa06721.bindPopup(popup_be1a432ce711466f3426009630c8ce34)
+        ;
+
+        
+    
+    
+            marker_7b9290c905f3797de46638fbdfa06721.bindTooltip(
+                `<div>
+                     Leyton Orient </br> Brisbane Road</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b9290c905f3797de46638fbdfa06721.setIcon(icon_8e929b3c6ccf522098ebe3a9722cd20d);
+            
+    
+            var marker_9cf96c1b1870ab72ead6e070c6470de3 = L.marker(
+                [51.8842, -0.4317],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_33a30743a6c8aeef9a8f4eaff329e852 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_f482d871cda8b1f808f4c5a4d94b9339 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_474cf24de3e72cb70febc4006d73fd22 = $(`<div id="html_474cf24de3e72cb70febc4006d73fd22" style="width: 100.0%; height: 100.0%;"><b>Luton Town</b><br>Kenilworth Road</div>`)[0];
+                popup_f482d871cda8b1f808f4c5a4d94b9339.setContent(html_474cf24de3e72cb70febc4006d73fd22);
+            
+        
+
+        marker_9cf96c1b1870ab72ead6e070c6470de3.bindPopup(popup_f482d871cda8b1f808f4c5a4d94b9339)
+        ;
+
+        
+    
+    
+            marker_9cf96c1b1870ab72ead6e070c6470de3.bindTooltip(
+                `<div>
+                     Luton Town </br> Kenilworth Road</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9cf96c1b1870ab72ead6e070c6470de3.setIcon(icon_33a30743a6c8aeef9a8f4eaff329e852);
+            
+    
+            var marker_a5e035831494ccb732817bcddb491198 = L.marker(
+                [53.1378, -1.2003],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_9e3a9ce1f1f6b6e9ac989618e8ecf18e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_62979340a85c4e3ad3d6ac3629d16995 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e36c130c937af95cf712033c9815a709 = $(`<div id="html_e36c130c937af95cf712033c9815a709" style="width: 100.0%; height: 100.0%;"><b>Mansfield Town</b><br>Field Mill (One Call Stadium)</div>`)[0];
+                popup_62979340a85c4e3ad3d6ac3629d16995.setContent(html_e36c130c937af95cf712033c9815a709);
+            
+        
+
+        marker_a5e035831494ccb732817bcddb491198.bindPopup(popup_62979340a85c4e3ad3d6ac3629d16995)
+        ;
+
+        
+    
+    
+            marker_a5e035831494ccb732817bcddb491198.bindTooltip(
+                `<div>
+                     Mansfield Town </br> Field Mill (One Call Stadium)</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a5e035831494ccb732817bcddb491198.setIcon(icon_9e3a9ce1f1f6b6e9ac989618e8ecf18e);
+            
+    
+            var marker_08e281c540322f549d79d6c0da054158 = L.marker(
+                [52.0094, -0.7332],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_cc044db6897e4ab0d5be2d45d8683a20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_508f41f68e1333fc72e920e910f86540 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b70c1dc50e624cf12408f188e1902e8b = $(`<div id="html_b70c1dc50e624cf12408f188e1902e8b" style="width: 100.0%; height: 100.0%;"><b>Milton Keynes Dons</b><br>Stadium MK</div>`)[0];
+                popup_508f41f68e1333fc72e920e910f86540.setContent(html_b70c1dc50e624cf12408f188e1902e8b);
+            
+        
+
+        marker_08e281c540322f549d79d6c0da054158.bindPopup(popup_508f41f68e1333fc72e920e910f86540)
+        ;
+
+        
+    
+    
+            marker_08e281c540322f549d79d6c0da054158.bindTooltip(
+                `<div>
+                     Milton Keynes Dons </br> Stadium MK</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08e281c540322f549d79d6c0da054158.setIcon(icon_cc044db6897e4ab0d5be2d45d8683a20);
+            
+    
+            var marker_fabb703db670172a8e7412a4aa8d387e = L.marker(
+                [52.9523, -1.1357],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_558635ffa94b2bc83408a4a4c2aa3e29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_5cd03747fac7ee83642c86d7b77aa756 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_be7fea50858e7f6a5820f0759362e882 = $(`<div id="html_be7fea50858e7f6a5820f0759362e882" style="width: 100.0%; height: 100.0%;"><b>Notts County</b><br>Meadow Lane</div>`)[0];
+                popup_5cd03747fac7ee83642c86d7b77aa756.setContent(html_be7fea50858e7f6a5820f0759362e882);
+            
+        
+
+        marker_fabb703db670172a8e7412a4aa8d387e.bindPopup(popup_5cd03747fac7ee83642c86d7b77aa756)
+        ;
+
+        
+    
+    
+            marker_fabb703db670172a8e7412a4aa8d387e.bindTooltip(
+                `<div>
+                     Notts County </br> Meadow Lane</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fabb703db670172a8e7412a4aa8d387e.setIcon(icon_558635ffa94b2bc83408a4a4c2aa3e29);
+            
+    
+            var marker_69b11f1fdfed8040d3d7676b2476d70a = L.marker(
+                [51.7164, -1.2083],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_d517917239c83ba6d82278313f4ebedf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_519cbcf9ebe4e3e97ec61e1ae345955e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ddec9c4fa901c110b4e811f608a64dca = $(`<div id="html_ddec9c4fa901c110b4e811f608a64dca" style="width: 100.0%; height: 100.0%;"><b>Oxford United</b><br>Kassam Stadium</div>`)[0];
+                popup_519cbcf9ebe4e3e97ec61e1ae345955e.setContent(html_ddec9c4fa901c110b4e811f608a64dca);
+            
+        
+
+        marker_69b11f1fdfed8040d3d7676b2476d70a.bindPopup(popup_519cbcf9ebe4e3e97ec61e1ae345955e)
+        ;
+
+        
+    
+    
+            marker_69b11f1fdfed8040d3d7676b2476d70a.bindTooltip(
+                `<div>
+                     Oxford United </br> Kassam Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69b11f1fdfed8040d3d7676b2476d70a.setIcon(icon_d517917239c83ba6d82278313f4ebedf);
+            
+    
+            var marker_bc307b349a0bf5ec1aa60fa7bd228052 = L.marker(
+                [52.5648, -0.2403],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_c655c56d8bde42986e47f02e77bd4df0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_42ba06e3c3a77d537c7b32536dab0b6f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_48ecba268b698389bd87b951b0c41aa0 = $(`<div id="html_48ecba268b698389bd87b951b0c41aa0" style="width: 100.0%; height: 100.0%;"><b>Peterborough United</b><br>London Road Stadium</div>`)[0];
+                popup_42ba06e3c3a77d537c7b32536dab0b6f.setContent(html_48ecba268b698389bd87b951b0c41aa0);
+            
+        
+
+        marker_bc307b349a0bf5ec1aa60fa7bd228052.bindPopup(popup_42ba06e3c3a77d537c7b32536dab0b6f)
+        ;
+
+        
+    
+    
+            marker_bc307b349a0bf5ec1aa60fa7bd228052.bindTooltip(
+                `<div>
+                     Peterborough United </br> London Road Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc307b349a0bf5ec1aa60fa7bd228052.setIcon(icon_c655c56d8bde42986e47f02e77bd4df0);
+            
+    
+            var marker_e520ce7ff3c97e97209f924d851980f0 = L.marker(
+                [50.3881, -4.1508],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_9a5497b747168a3459b24af24ece571a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_8e7a674b365215c50786d6cbdb659734 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_23e023fae3b2ea5ceb25612b7da56ec3 = $(`<div id="html_23e023fae3b2ea5ceb25612b7da56ec3" style="width: 100.0%; height: 100.0%;"><b>Plymouth Argyle</b><br>Home Park</div>`)[0];
+                popup_8e7a674b365215c50786d6cbdb659734.setContent(html_23e023fae3b2ea5ceb25612b7da56ec3);
+            
+        
+
+        marker_e520ce7ff3c97e97209f924d851980f0.bindPopup(popup_8e7a674b365215c50786d6cbdb659734)
+        ;
+
+        
+    
+    
+            marker_e520ce7ff3c97e97209f924d851980f0.bindTooltip(
+                `<div>
+                     Plymouth Argyle </br> Home Park</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e520ce7ff3c97e97209f924d851980f0.setIcon(icon_9a5497b747168a3459b24af24ece571a);
+            
+    
+            var marker_5c5e06f0edc470a9fc7cc48f89d8cef2 = L.marker(
+                [51.4222, -0.9827],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_17d6867bb347d06d3756ad46db9ad16b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_d4eca7dc9479460719f9da2c4c69e5a6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f0fbefc74d68ca42cde444f0cd9400c6 = $(`<div id="html_f0fbefc74d68ca42cde444f0cd9400c6" style="width: 100.0%; height: 100.0%;"><b>Reading</b><br>Madejski Stadium</div>`)[0];
+                popup_d4eca7dc9479460719f9da2c4c69e5a6.setContent(html_f0fbefc74d68ca42cde444f0cd9400c6);
+            
+        
+
+        marker_5c5e06f0edc470a9fc7cc48f89d8cef2.bindPopup(popup_d4eca7dc9479460719f9da2c4c69e5a6)
+        ;
+
+        
+    
+    
+            marker_5c5e06f0edc470a9fc7cc48f89d8cef2.bindTooltip(
+                `<div>
+                     Reading </br> Madejski Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c5e06f0edc470a9fc7cc48f89d8cef2.setIcon(icon_17d6867bb347d06d3756ad46db9ad16b);
+            
+    
+            var marker_aea1483a8ccf973bcbd91637009e80dd = L.marker(
+                [53.4114, -1.5006],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_13f75311efa68c8563273df98c9a82cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_9074ce1518e129aab4c8ee3db9997402 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_48d4b0d6109007a4c971745391e65997 = $(`<div id="html_48d4b0d6109007a4c971745391e65997" style="width: 100.0%; height: 100.0%;"><b>Sheffield Wednesday</b><br>Hillsborough Stadium</div>`)[0];
+                popup_9074ce1518e129aab4c8ee3db9997402.setContent(html_48d4b0d6109007a4c971745391e65997);
+            
+        
+
+        marker_aea1483a8ccf973bcbd91637009e80dd.bindPopup(popup_9074ce1518e129aab4c8ee3db9997402)
+        ;
+
+        
+    
+    
+            marker_aea1483a8ccf973bcbd91637009e80dd.bindTooltip(
+                `<div>
+                     Sheffield Wednesday </br> Hillsborough Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aea1483a8ccf973bcbd91637009e80dd.setIcon(icon_13f75311efa68c8563273df98c9a82cf);
+            
+    
+            var marker_23db7244e87fd3ceba00537fd364caa7 = L.marker(
+                [51.8895, -0.1936],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b52f9b380c765aa33e8a7c2fd6058170 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_1aa3bbc9b2280230a697d61eef522917 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4c0fc5263b187daff40dcaebbc21f604 = $(`<div id="html_4c0fc5263b187daff40dcaebbc21f604" style="width: 100.0%; height: 100.0%;"><b>Stevenage</b><br>Broadhall Way (Lamex Stadium)</div>`)[0];
+                popup_1aa3bbc9b2280230a697d61eef522917.setContent(html_4c0fc5263b187daff40dcaebbc21f604);
+            
+        
+
+        marker_23db7244e87fd3ceba00537fd364caa7.bindPopup(popup_1aa3bbc9b2280230a697d61eef522917)
+        ;
+
+        
+    
+    
+            marker_23db7244e87fd3ceba00537fd364caa7.bindTooltip(
+                `<div>
+                     Stevenage </br> Broadhall Way (Lamex Stadium)</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_23db7244e87fd3ceba00537fd364caa7.setIcon(icon_b52f9b380c765aa33e8a7c2fd6058170);
+            
+    
+            var marker_d163e91ef0860dca1ad51c3e2c28b220 = L.marker(
+                [53.4045, -2.1664],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_292a6901f85cb7215a98bf961ed46fdd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_906cd4169672df0aacb366fc1f636339 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ea4107b57c8119bf1c4fa6afc3783771 = $(`<div id="html_ea4107b57c8119bf1c4fa6afc3783771" style="width: 100.0%; height: 100.0%;"><b>Stockport County</b><br>Edgeley Park</div>`)[0];
+                popup_906cd4169672df0aacb366fc1f636339.setContent(html_ea4107b57c8119bf1c4fa6afc3783771);
+            
+        
+
+        marker_d163e91ef0860dca1ad51c3e2c28b220.bindPopup(popup_906cd4169672df0aacb366fc1f636339)
+        ;
+
+        
+    
+    
+            marker_d163e91ef0860dca1ad51c3e2c28b220.bindTooltip(
+                `<div>
+                     Stockport County </br> Edgeley Park</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d163e91ef0860dca1ad51c3e2c28b220.setIcon(icon_292a6901f85cb7215a98bf961ed46fdd);
+            
+    
+            var marker_a69ba95eec995d452dd4feb2762540fe = L.marker(
+                [53.5478, -2.6539],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_14294ed733f9c76fb94dfcb216ba929e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_1fb01354123efec8f19f69addacd69ab = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_01fb8332c53f320a644c85e8661346f5 = $(`<div id="html_01fb8332c53f320a644c85e8661346f5" style="width: 100.0%; height: 100.0%;"><b>Wigan Athletic</b><br>Brick Community Stadium</div>`)[0];
+                popup_1fb01354123efec8f19f69addacd69ab.setContent(html_01fb8332c53f320a644c85e8661346f5);
+            
+        
+
+        marker_a69ba95eec995d452dd4feb2762540fe.bindPopup(popup_1fb01354123efec8f19f69addacd69ab)
+        ;
+
+        
+    
+    
+            marker_a69ba95eec995d452dd4feb2762540fe.bindTooltip(
+                `<div>
+                     Wigan Athletic </br> Brick Community Stadium</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a69ba95eec995d452dd4feb2762540fe.setIcon(icon_14294ed733f9c76fb94dfcb216ba929e);
+            
+    
+            var marker_c2b65debe8194f1bb6ccd70df474bc23 = L.marker(
+                [51.6306, -0.8003],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_c03ed609db44abcbd45eaa33855b622d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 1,
+}
+            );
+        
+    
+        var popup_2b7e95d92f152d472f1abf83413a7a2e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_777a9ef81bc449ce57942b3cd28ac2b8 = $(`<div id="html_777a9ef81bc449ce57942b3cd28ac2b8" style="width: 100.0%; height: 100.0%;"><b>Wycombe Wanderers</b><br>Adams Park</div>`)[0];
+                popup_2b7e95d92f152d472f1abf83413a7a2e.setContent(html_777a9ef81bc449ce57942b3cd28ac2b8);
+            
+        
+
+        marker_c2b65debe8194f1bb6ccd70df474bc23.bindPopup(popup_2b7e95d92f152d472f1abf83413a7a2e)
+        ;
+
+        
+    
+    
+            marker_c2b65debe8194f1bb6ccd70df474bc23.bindTooltip(
+                `<div>
+                     Wycombe Wanderers </br> Adams Park</br> League One
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2b65debe8194f1bb6ccd70df474bc23.setIcon(icon_c03ed609db44abcbd45eaa33855b622d);
+            
+    
+            var marker_3fac5b54b6e5dfc6cca58ec83506dea3 = L.marker(
+                [53.7686, -2.3705],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_f2be1b4c325ce867612c380a9463f303 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_c7d90cd6fb56967642359bcf06b44585 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_be33eb4cf3fed32c21d1ea04c38b0a64 = $(`<div id="html_be33eb4cf3fed32c21d1ea04c38b0a64" style="width: 100.0%; height: 100.0%;"><b>Accrington Stanley</b><br>Crown Ground (Wham Stadium)</div>`)[0];
+                popup_c7d90cd6fb56967642359bcf06b44585.setContent(html_be33eb4cf3fed32c21d1ea04c38b0a64);
+            
+        
+
+        marker_3fac5b54b6e5dfc6cca58ec83506dea3.bindPopup(popup_c7d90cd6fb56967642359bcf06b44585)
+        ;
+
+        
+    
+    
+            marker_3fac5b54b6e5dfc6cca58ec83506dea3.bindTooltip(
+                `<div>
+                     Accrington Stanley </br> Crown Ground (Wham Stadium)</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3fac5b54b6e5dfc6cca58ec83506dea3.setIcon(icon_f2be1b4c325ce867612c380a9463f303);
+            
+    
+            var marker_fb3831e777a61bc17bf8e9fbc7d836a0 = L.marker(
+                [51.6003, -0.2934],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_5e82249c1fa763f26d123012f477a010 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_284b7814dd637cf01445c94bdf862a17 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_da25a05e2e0f5a23545ac7b3a8943100 = $(`<div id="html_da25a05e2e0f5a23545ac7b3a8943100" style="width: 100.0%; height: 100.0%;"><b>Barnet</b><br>The Hive Stadium</div>`)[0];
+                popup_284b7814dd637cf01445c94bdf862a17.setContent(html_da25a05e2e0f5a23545ac7b3a8943100);
+            
+        
+
+        marker_fb3831e777a61bc17bf8e9fbc7d836a0.bindPopup(popup_284b7814dd637cf01445c94bdf862a17)
+        ;
+
+        
+    
+    
+            marker_fb3831e777a61bc17bf8e9fbc7d836a0.bindTooltip(
+                `<div>
+                     Barnet </br> The Hive Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb3831e777a61bc17bf8e9fbc7d836a0.setIcon(icon_5e82249c1fa763f26d123012f477a010);
+            
+    
+            var marker_ddf7786255ee379361de94a94ea92d42 = L.marker(
+                [51.4862, -2.5836],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_94c7317d3c8b2994a534597cf906890a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_4905fe1db6b6d82ad06f4f2102ce79e3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bdc376cd06972bbfad7fab74a419bd31 = $(`<div id="html_bdc376cd06972bbfad7fab74a419bd31" style="width: 100.0%; height: 100.0%;"><b>Bristol Rovers</b><br>Memorial Stadium</div>`)[0];
+                popup_4905fe1db6b6d82ad06f4f2102ce79e3.setContent(html_bdc376cd06972bbfad7fab74a419bd31);
+            
+        
+
+        marker_ddf7786255ee379361de94a94ea92d42.bindPopup(popup_4905fe1db6b6d82ad06f4f2102ce79e3)
+        ;
+
+        
+    
+    
+            marker_ddf7786255ee379361de94a94ea92d42.bindTooltip(
+                `<div>
+                     Bristol Rovers </br> Memorial Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ddf7786255ee379361de94a94ea92d42.setIcon(icon_94c7317d3c8b2994a534597cf906890a);
+            
+    
+            var marker_73d1287859a840f4ecf4234b0022f85d = L.marker(
+                [51.9069, -2.0608],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_d897ba4b098a5a5bc51e68c535db97bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_f3af04981274c6ae41152bdc78d9e6ad = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a7756dc2aef36b537738b1f1cdb9d7c0 = $(`<div id="html_a7756dc2aef36b537738b1f1cdb9d7c0" style="width: 100.0%; height: 100.0%;"><b>Cheltenham Town</b><br>Whaddon Road</div>`)[0];
+                popup_f3af04981274c6ae41152bdc78d9e6ad.setContent(html_a7756dc2aef36b537738b1f1cdb9d7c0);
+            
+        
+
+        marker_73d1287859a840f4ecf4234b0022f85d.bindPopup(popup_f3af04981274c6ae41152bdc78d9e6ad)
+        ;
+
+        
+    
+    
+            marker_73d1287859a840f4ecf4234b0022f85d.bindTooltip(
+                `<div>
+                     Cheltenham Town </br> Whaddon Road</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_73d1287859a840f4ecf4234b0022f85d.setIcon(icon_d897ba4b098a5a5bc51e68c535db97bf);
+            
+    
+            var marker_36556bd30c9598892d0a7be1ab1069fc = L.marker(
+                [53.2469, -1.4275],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_c8ecfd16b4605c6fb6b99a7776d11c95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_020d6d2aea5ce4ad026cee8ab908c973 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_60b82ba5ca329982c392da24b592b8fc = $(`<div id="html_60b82ba5ca329982c392da24b592b8fc" style="width: 100.0%; height: 100.0%;"><b>Chesterfield</b><br>SMH Group Stadium</div>`)[0];
+                popup_020d6d2aea5ce4ad026cee8ab908c973.setContent(html_60b82ba5ca329982c392da24b592b8fc);
+            
+        
+
+        marker_36556bd30c9598892d0a7be1ab1069fc.bindPopup(popup_020d6d2aea5ce4ad026cee8ab908c973)
+        ;
+
+        
+    
+    
+            marker_36556bd30c9598892d0a7be1ab1069fc.bindTooltip(
+                `<div>
+                     Chesterfield </br> SMH Group Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_36556bd30c9598892d0a7be1ab1069fc.setIcon(icon_c8ecfd16b4605c6fb6b99a7776d11c95);
+            
+    
+            var marker_c1912bdbbd3c31db4d01212176b3a860 = L.marker(
+                [51.9237, 0.8997],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_c07b62170095a67307a50a6b1124239c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_d14dd9561b9013bb1d2f50ebbecb0ee1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a91e157c1f21fb726d0db0b16151b98c = $(`<div id="html_a91e157c1f21fb726d0db0b16151b98c" style="width: 100.0%; height: 100.0%;"><b>Colchester United</b><br>Colchester Community Stadium</div>`)[0];
+                popup_d14dd9561b9013bb1d2f50ebbecb0ee1.setContent(html_a91e157c1f21fb726d0db0b16151b98c);
+            
+        
+
+        marker_c1912bdbbd3c31db4d01212176b3a860.bindPopup(popup_d14dd9561b9013bb1d2f50ebbecb0ee1)
+        ;
+
+        
+    
+    
+            marker_c1912bdbbd3c31db4d01212176b3a860.bindTooltip(
+                `<div>
+                     Colchester United </br> Colchester Community Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1912bdbbd3c31db4d01212176b3a860.setIcon(icon_c07b62170095a67307a50a6b1124239c);
+            
+    
+            var marker_ec40b02a7d611853dab3b23328c16abf = L.marker(
+                [51.0976, -0.1944],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_8e844e4c38cd95168d09808e8f8bc45a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_98016f0322bb68621a26fd9beddfa83a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bc1390f92100ce4648a5f71625aedcae = $(`<div id="html_bc1390f92100ce4648a5f71625aedcae" style="width: 100.0%; height: 100.0%;"><b>Crawley Town</b><br>Broadfield Stadium</div>`)[0];
+                popup_98016f0322bb68621a26fd9beddfa83a.setContent(html_bc1390f92100ce4648a5f71625aedcae);
+            
+        
+
+        marker_ec40b02a7d611853dab3b23328c16abf.bindPopup(popup_98016f0322bb68621a26fd9beddfa83a)
+        ;
+
+        
+    
+    
+            marker_ec40b02a7d611853dab3b23328c16abf.bindTooltip(
+                `<div>
+                     Crawley Town </br> Broadfield Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec40b02a7d611853dab3b23328c16abf.setIcon(icon_8e844e4c38cd95168d09808e8f8bc45a);
+            
+    
+            var marker_a0f01b843d4e4d8e19388682f695c93f = L.marker(
+                [53.089, -2.4356],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_9f6e9ae48b3454333e8f201c2c97c841 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_14cdf81a6cd1a395c974f515e804ba2d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f4625d882184d51d7f885d0a900d4432 = $(`<div id="html_f4625d882184d51d7f885d0a900d4432" style="width: 100.0%; height: 100.0%;"><b>Crewe Alexandra</b><br>Gresty Road (Mornflake Stadium)</div>`)[0];
+                popup_14cdf81a6cd1a395c974f515e804ba2d.setContent(html_f4625d882184d51d7f885d0a900d4432);
+            
+        
+
+        marker_a0f01b843d4e4d8e19388682f695c93f.bindPopup(popup_14cdf81a6cd1a395c974f515e804ba2d)
+        ;
+
+        
+    
+    
+            marker_a0f01b843d4e4d8e19388682f695c93f.bindTooltip(
+                `<div>
+                     Crewe Alexandra </br> Gresty Road (Mornflake Stadium)</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0f01b843d4e4d8e19388682f695c93f.setIcon(icon_9f6e9ae48b3454333e8f201c2c97c841);
+            
+    
+            var marker_9fc8d12c99f81bab18f43ae29ff8ecbc = L.marker(
+                [50.7301, -3.5215],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_2aca6b625630f2a461fa31bcc701c356 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_2f097058f2964e762153e95cd072d3fe = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b64f5ba468ccdcddf81e56ef845d02e4 = $(`<div id="html_b64f5ba468ccdcddf81e56ef845d02e4" style="width: 100.0%; height: 100.0%;"><b>Exeter City</b><br>St James Park</div>`)[0];
+                popup_2f097058f2964e762153e95cd072d3fe.setContent(html_b64f5ba468ccdcddf81e56ef845d02e4);
+            
+        
+
+        marker_9fc8d12c99f81bab18f43ae29ff8ecbc.bindPopup(popup_2f097058f2964e762153e95cd072d3fe)
+        ;
+
+        
+    
+    
+            marker_9fc8d12c99f81bab18f43ae29ff8ecbc.bindTooltip(
+                `<div>
+                     Exeter City </br> St James Park</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fc8d12c99f81bab18f43ae29ff8ecbc.setIcon(icon_2aca6b625630f2a461fa31bcc701c356);
+            
+    
+            var marker_c61f8e66dd8998dc71438b6a1074afb8 = L.marker(
+                [53.9181, -3.0156],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_0fa6502928282e486b5ce1176daf4d83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_320ff575a1d003c3acb567b54bfc3180 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f07a8e208953502b7d2d5c51189cc8d7 = $(`<div id="html_f07a8e208953502b7d2d5c51189cc8d7" style="width: 100.0%; height: 100.0%;"><b>Fleetwood Town</b><br>Highbury Stadium</div>`)[0];
+                popup_320ff575a1d003c3acb567b54bfc3180.setContent(html_f07a8e208953502b7d2d5c51189cc8d7);
+            
+        
+
+        marker_c61f8e66dd8998dc71438b6a1074afb8.bindPopup(popup_320ff575a1d003c3acb567b54bfc3180)
+        ;
+
+        
+    
+    
+            marker_c61f8e66dd8998dc71438b6a1074afb8.bindTooltip(
+                `<div>
+                     Fleetwood Town </br> Highbury Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c61f8e66dd8998dc71438b6a1074afb8.setIcon(icon_0fa6502928282e486b5ce1176daf4d83);
+            
+    
+            var marker_e8d8135b7adab7dd9719c167530bde6e = L.marker(
+                [51.3847, 0.5608],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_54ed24b1009315f312e5b7f6ed99d018 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_b6084a28c23fc88b4800534d058c6693 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cb343c35ef7fa3d17e38cb48beee73c6 = $(`<div id="html_cb343c35ef7fa3d17e38cb48beee73c6" style="width: 100.0%; height: 100.0%;"><b>Gillingham</b><br>Priestfield Stadium</div>`)[0];
+                popup_b6084a28c23fc88b4800534d058c6693.setContent(html_cb343c35ef7fa3d17e38cb48beee73c6);
+            
+        
+
+        marker_e8d8135b7adab7dd9719c167530bde6e.bindPopup(popup_b6084a28c23fc88b4800534d058c6693)
+        ;
+
+        
+    
+    
+            marker_e8d8135b7adab7dd9719c167530bde6e.bindTooltip(
+                `<div>
+                     Gillingham </br> Priestfield Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e8d8135b7adab7dd9719c167530bde6e.setIcon(icon_54ed24b1009315f312e5b7f6ed99d018);
+            
+    
+            var marker_3743d2f4747bb674463a74c13566052f = L.marker(
+                [53.5697, -0.0461],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_b3efcd4316ad4845c0ab434959f0f3d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_741a49d43676811ca8fb18be5de30478 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_938da3499383acad6dfd2036fbaadd7e = $(`<div id="html_938da3499383acad6dfd2036fbaadd7e" style="width: 100.0%; height: 100.0%;"><b>Grimsby Town</b><br>Blundell Park</div>`)[0];
+                popup_741a49d43676811ca8fb18be5de30478.setContent(html_938da3499383acad6dfd2036fbaadd7e);
+            
+        
+
+        marker_3743d2f4747bb674463a74c13566052f.bindPopup(popup_741a49d43676811ca8fb18be5de30478)
+        ;
+
+        
+    
+    
+            marker_3743d2f4747bb674463a74c13566052f.bindTooltip(
+                `<div>
+                     Grimsby Town </br> Blundell Park</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3743d2f4747bb674463a74c13566052f.setIcon(icon_b3efcd4316ad4845c0ab434959f0f3d3);
+            
+    
+            var marker_14b9bcc5d7d13e18d52635bacc868d7e = L.marker(
+                [51.5897, -2.9869],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_fd1b2779ec74eef045862205452c129f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_d057aac8f12601ecf55fd8ddba188741 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bf6160d27e84aeca3a2541e0d29b8d4a = $(`<div id="html_bf6160d27e84aeca3a2541e0d29b8d4a" style="width: 100.0%; height: 100.0%;"><b>Newport County</b><br>Rodney Parade</div>`)[0];
+                popup_d057aac8f12601ecf55fd8ddba188741.setContent(html_bf6160d27e84aeca3a2541e0d29b8d4a);
+            
+        
+
+        marker_14b9bcc5d7d13e18d52635bacc868d7e.bindPopup(popup_d057aac8f12601ecf55fd8ddba188741)
+        ;
+
+        
+    
+    
+            marker_14b9bcc5d7d13e18d52635bacc868d7e.bindTooltip(
+                `<div>
+                     Newport County </br> Rodney Parade</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_14b9bcc5d7d13e18d52635bacc868d7e.setIcon(icon_fd1b2779ec74eef045862205452c129f);
+            
+    
+            var marker_cb218d4fb73c5159bb1c3d1e43018541 = L.marker(
+                [52.2353, -0.9333],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_70aedf9fc510fc312283de51897314c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_45e43f77c455383f61b804c3f43a95c9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0a0943588f2ba90545105b22ff1a73d4 = $(`<div id="html_0a0943588f2ba90545105b22ff1a73d4" style="width: 100.0%; height: 100.0%;"><b>Northampton Town</b><br>Sixfields Stadium</div>`)[0];
+                popup_45e43f77c455383f61b804c3f43a95c9.setContent(html_0a0943588f2ba90545105b22ff1a73d4);
+            
+        
+
+        marker_cb218d4fb73c5159bb1c3d1e43018541.bindPopup(popup_45e43f77c455383f61b804c3f43a95c9)
+        ;
+
+        
+    
+    
+            marker_cb218d4fb73c5159bb1c3d1e43018541.bindTooltip(
+                `<div>
+                     Northampton Town </br> Sixfields Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb218d4fb73c5159bb1c3d1e43018541.setIcon(icon_70aedf9fc510fc312283de51897314c6);
+            
+    
+            var marker_0a4b1fa1a767e8f26a46d40df62630af = L.marker(
+                [53.5556, -2.1283],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_cfa49a1f1cf13abb15198b8c1d48a8ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_32771b2d0babaaa9add75ffdedc6bed3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2d2c3db4ba44c781e8ac5d46942e791a = $(`<div id="html_2d2c3db4ba44c781e8ac5d46942e791a" style="width: 100.0%; height: 100.0%;"><b>Oldham Athletic</b><br>Boundary Park</div>`)[0];
+                popup_32771b2d0babaaa9add75ffdedc6bed3.setContent(html_2d2c3db4ba44c781e8ac5d46942e791a);
+            
+        
+
+        marker_0a4b1fa1a767e8f26a46d40df62630af.bindPopup(popup_32771b2d0babaaa9add75ffdedc6bed3)
+        ;
+
+        
+    
+    
+            marker_0a4b1fa1a767e8f26a46d40df62630af.bindTooltip(
+                `<div>
+                     Oldham Athletic </br> Boundary Park</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a4b1fa1a767e8f26a46d40df62630af.setIcon(icon_cfa49a1f1cf13abb15198b8c1d48a8ec);
+            
+    
+            var marker_3ab46874739f541b4dbd938dd6ddbcf3 = L.marker(
+                [53.0503, -2.1922],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_e2668a98c6e658dcb827dcd7de4b32d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_55547e965e9f14c914da39ec351a9367 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_90cc279095d1ef388d37fd28bdced60e = $(`<div id="html_90cc279095d1ef388d37fd28bdced60e" style="width: 100.0%; height: 100.0%;"><b>Port Vale</b><br>Vale Park</div>`)[0];
+                popup_55547e965e9f14c914da39ec351a9367.setContent(html_90cc279095d1ef388d37fd28bdced60e);
+            
+        
+
+        marker_3ab46874739f541b4dbd938dd6ddbcf3.bindPopup(popup_55547e965e9f14c914da39ec351a9367)
+        ;
+
+        
+    
+    
+            marker_3ab46874739f541b4dbd938dd6ddbcf3.bindTooltip(
+                `<div>
+                     Port Vale </br> Vale Park</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3ab46874739f541b4dbd938dd6ddbcf3.setIcon(icon_e2668a98c6e658dcb827dcd7de4b32d6);
+            
+    
+            var marker_97f493057f1460ef549f2a631976f777 = L.marker(
+                [53.6209, -2.1869],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_9bc7a615b96b23d0e692b2c90462586b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_1faccbfdcadee5db89a6fbe3c9faac41 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_525fd42557504c01bdf124c6ae3e0192 = $(`<div id="html_525fd42557504c01bdf124c6ae3e0192" style="width: 100.0%; height: 100.0%;"><b>Rochdale</b><br>Spotland Stadium (Crown Oil Arena)</div>`)[0];
+                popup_1faccbfdcadee5db89a6fbe3c9faac41.setContent(html_525fd42557504c01bdf124c6ae3e0192);
+            
+        
+
+        marker_97f493057f1460ef549f2a631976f777.bindPopup(popup_1faccbfdcadee5db89a6fbe3c9faac41)
+        ;
+
+        
+    
+    
+            marker_97f493057f1460ef549f2a631976f777.bindTooltip(
+                `<div>
+                     Rochdale </br> Spotland Stadium (Crown Oil Arena)</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97f493057f1460ef549f2a631976f777.setIcon(icon_9bc7a615b96b23d0e692b2c90462586b);
+            
+    
+            var marker_dd9087fe5fc29e8a1dd495455abe66df = L.marker(
+                [53.428, -1.362],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_76010db5ed6e2386cfb27c08cb192251 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_dbdb4c2e931652b1ee9d6b690c077050 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9a6cc25f1bf4a9a31f2696a1fc6c0aaf = $(`<div id="html_9a6cc25f1bf4a9a31f2696a1fc6c0aaf" style="width: 100.0%; height: 100.0%;"><b>Rotherham United</b><br>New York Stadium</div>`)[0];
+                popup_dbdb4c2e931652b1ee9d6b690c077050.setContent(html_9a6cc25f1bf4a9a31f2696a1fc6c0aaf);
+            
+        
+
+        marker_dd9087fe5fc29e8a1dd495455abe66df.bindPopup(popup_dbdb4c2e931652b1ee9d6b690c077050)
+        ;
+
+        
+    
+    
+            marker_dd9087fe5fc29e8a1dd495455abe66df.bindTooltip(
+                `<div>
+                     Rotherham United </br> New York Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd9087fe5fc29e8a1dd495455abe66df.setIcon(icon_76010db5ed6e2386cfb27c08cb192251);
+            
+    
+            var marker_1e5c1c09d2ceded45e22e2b7905dd75f = L.marker(
+                [53.5125, -2.2786],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_5c5f785da97ff815caee7d031abc5315 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_42aa5ac9a80a782f9b9227400b13a7e2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3536094bff3be50b80c0a2f8ebc3ef80 = $(`<div id="html_3536094bff3be50b80c0a2f8ebc3ef80" style="width: 100.0%; height: 100.0%;"><b>Salford City</b><br>Moor Lane (Peninsula Stadium)</div>`)[0];
+                popup_42aa5ac9a80a782f9b9227400b13a7e2.setContent(html_3536094bff3be50b80c0a2f8ebc3ef80);
+            
+        
+
+        marker_1e5c1c09d2ceded45e22e2b7905dd75f.bindPopup(popup_42aa5ac9a80a782f9b9227400b13a7e2)
+        ;
+
+        
+    
+    
+            marker_1e5c1c09d2ceded45e22e2b7905dd75f.bindTooltip(
+                `<div>
+                     Salford City </br> Moor Lane (Peninsula Stadium)</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e5c1c09d2ceded45e22e2b7905dd75f.setIcon(icon_5c5f785da97ff815caee7d031abc5315);
+            
+    
+            var marker_ca0c6716992a6bf603fbca2a9842a778 = L.marker(
+                [52.6883, -2.7491],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_3ff22f92cdff0bc424129367d3770f30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_d3e50f660d4f85b2a74b1a4a7974c20d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fbdb6f075897e7e6c94de153a7442181 = $(`<div id="html_fbdb6f075897e7e6c94de153a7442181" style="width: 100.0%; height: 100.0%;"><b>Shrewsbury Town</b><br>New Meadow</div>`)[0];
+                popup_d3e50f660d4f85b2a74b1a4a7974c20d.setContent(html_fbdb6f075897e7e6c94de153a7442181);
+            
+        
+
+        marker_ca0c6716992a6bf603fbca2a9842a778.bindPopup(popup_d3e50f660d4f85b2a74b1a4a7974c20d)
+        ;
+
+        
+    
+    
+            marker_ca0c6716992a6bf603fbca2a9842a778.bindTooltip(
+                `<div>
+                     Shrewsbury Town </br> New Meadow</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca0c6716992a6bf603fbca2a9842a778.setIcon(icon_3ff22f92cdff0bc424129367d3770f30);
+            
+    
+            var marker_170480027b86fbc8e25423e8c41e767d = L.marker(
+                [51.5644, -1.7711],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_6ddd9b6552107ec70239e439aa3b63d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_91befc47e1db9bdc19af8f461a509242 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3792f5c207458ca6d692a4316b556e4e = $(`<div id="html_3792f5c207458ca6d692a4316b556e4e" style="width: 100.0%; height: 100.0%;"><b>Swindon Town</b><br>County Ground</div>`)[0];
+                popup_91befc47e1db9bdc19af8f461a509242.setContent(html_3792f5c207458ca6d692a4316b556e4e);
+            
+        
+
+        marker_170480027b86fbc8e25423e8c41e767d.bindPopup(popup_91befc47e1db9bdc19af8f461a509242)
+        ;
+
+        
+    
+    
+            marker_170480027b86fbc8e25423e8c41e767d.bindTooltip(
+                `<div>
+                     Swindon Town </br> County Ground</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_170480027b86fbc8e25423e8c41e767d.setIcon(icon_6ddd9b6552107ec70239e439aa3b63d1);
+            
+    
+            var marker_e150b9d71a73ada72137cee4ae9142c3 = L.marker(
+                [53.3736, -3.0328],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_d5fa4b6f6b6c26a32eb3ce824ba01ec5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_63cb1536613014d2b8dca4c74d071971 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3cae23644a3f1388125288560be6d273 = $(`<div id="html_3cae23644a3f1388125288560be6d273" style="width: 100.0%; height: 100.0%;"><b>Tranmere Rovers</b><br>Prenton Park</div>`)[0];
+                popup_63cb1536613014d2b8dca4c74d071971.setContent(html_3cae23644a3f1388125288560be6d273);
+            
+        
+
+        marker_e150b9d71a73ada72137cee4ae9142c3.bindPopup(popup_63cb1536613014d2b8dca4c74d071971)
+        ;
+
+        
+    
+    
+            marker_e150b9d71a73ada72137cee4ae9142c3.bindTooltip(
+                `<div>
+                     Tranmere Rovers </br> Prenton Park</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e150b9d71a73ada72137cee4ae9142c3.setIcon(icon_d5fa4b6f6b6c26a32eb3ce824ba01ec5);
+            
+    
+            var marker_ed80b1d7189fcea996cbd67427725805 = L.marker(
+                [52.5656, -1.9908],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_f02c9e7e4f50e53fbdaecc99a207c20b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_bbc082a350845972086d5ee8a6625bf8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_50a3da76928827ffa20ceffc91448c5c = $(`<div id="html_50a3da76928827ffa20ceffc91448c5c" style="width: 100.0%; height: 100.0%;"><b>Walsall</b><br>Bescot Stadium</div>`)[0];
+                popup_bbc082a350845972086d5ee8a6625bf8.setContent(html_50a3da76928827ffa20ceffc91448c5c);
+            
+        
+
+        marker_ed80b1d7189fcea996cbd67427725805.bindPopup(popup_bbc082a350845972086d5ee8a6625bf8)
+        ;
+
+        
+    
+    
+            marker_ed80b1d7189fcea996cbd67427725805.bindTooltip(
+                `<div>
+                     Walsall </br> Bescot Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed80b1d7189fcea996cbd67427725805.setIcon(icon_f02c9e7e4f50e53fbdaecc99a207c20b);
+            
+    
+            var marker_8f3d7ab72ce8ec3725b7e0273965b7f5 = L.marker(
+                [53.9897, -1.0556],
+                {
+}
+            ).addTo(map_9da2f635cf9dd5e898f651a02a11c6b7);
+        
+    
+            var icon_f322828294755b2fb9035918b340444b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "zIndexOffset": 0,
+}
+            );
+        
+    
+        var popup_97013d904bd70139937fcbd5c048d322 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_78982c44548282742b2b7d29011fa25b = $(`<div id="html_78982c44548282742b2b7d29011fa25b" style="width: 100.0%; height: 100.0%;"><b>York City</b><br>York Community Stadium</div>`)[0];
+                popup_97013d904bd70139937fcbd5c048d322.setContent(html_78982c44548282742b2b7d29011fa25b);
+            
+        
+
+        marker_8f3d7ab72ce8ec3725b7e0273965b7f5.bindPopup(popup_97013d904bd70139937fcbd5c048d322)
+        ;
+
+        
+    
+    
+            marker_8f3d7ab72ce8ec3725b7e0273965b7f5.bindTooltip(
+                `<div>
+                     York City </br> York Community Stadium</br> League Two
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8f3d7ab72ce8ec3725b7e0273965b7f5.setIcon(icon_f322828294755b2fb9035918b340444b);
+            
+</script>
+</html>
